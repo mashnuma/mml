@@ -1,0 +1,46 @@
+// SJIS:CRLF
+|"Labyrinth(B3F) - PSG version / by MARSH"
+// ------------------------------------------------
+//  Labyrinth(B3F) - PSG version
+// ------------------------------------------------
+//  Composer:  MARSH (Twitter: @mashnuma)
+//  Copyright: (C) MARSH (Twitter: @mashnuma)
+
+// モジュール設定
+|M1 SSG
+
+// SSGエンベロープマクロ
+// E[AR],[DR],[SR],[RR],[SL]
+!0 P1 E0,0,0,0,0
+!1 P1 E31,10,1,3,2
+!2 P1 E31,8,1,3,3
+!3 P2 E31,10,1,0,8
+
+// ------------------------------------------------
+// Setup
+
+M1:1 t164
+M1:1,2,3 !0v0o1r8c64r16..
+
+M1:1 !1 v14 o4 Q24 l8 D0 L1,200,25,6,255
+M1:2 !1 v13 o4 Q24 l8 D8 L1,200,25,6,255
+M1:3 !2 v14 o4 Q16 l8 D0 w10
+
+M1:1,2,3 r2. \
+
+// ------------------------------------------------
+
+M1:1 o4 [ [a4b>cr16(3c16)3<e4.& e2&edef / e2.ce a2..r]2 e1 d2r!3c4c!1 ]2
+M1:2 o4 [ [e4gar16(3a16)3<ea>c& c2&c<b>cd / c2.<a>c e2<b2>]2 <b2a2 g2rb>d<b> ]2
+M1:3 o1 [ [a>a<!3a!2>a<]8 [f>f<!3f!2>f<]4 [g>g<!3g!2>g<]4 ]2
+
+M1:1 [a2&aea>c d4c<brb>c<b& b4>c<a&a2& a2&ar4!3c!1]2 
+M1:2 [(3r.a2&aea>c d4c<brb>c<b& b4>c<a16)3 / ea>c d<e>c<ebe>c4<]2 ea>e d<e>c<ebe>c4<
+M1:3 [ [a>a<!3a!2>a<]2 [g>g<!3g!2>g<]2 [f>f<!3f!2>f<]2 [g>g<!3g!2>g<]2 ]
+
+M1:1 fcfa>c<bab gdgbr16(3b16)3gdg
+M1:2 (3r.fcfa>c<ba16)3 d<b>dgr16(3g16)3d<b>d
+M1:3 [f>f<!3f!2>f<]2 [g>g<!3g!2>g<]2
+
+// ------------------------------------------------
+// EOF
